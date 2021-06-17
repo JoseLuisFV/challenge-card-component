@@ -1,3 +1,7 @@
+:root {
+    --general-radius: 10px;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -22,14 +26,24 @@ body {
     width: 88%;
     max-width: 1267px;
     margin: 100px auto 0px;
+    padding-bottom: 50px;
+    text-align: center;
+    border-radius: var(--general-radius);
     background-color: hsl(244, 38%, 16%);
 }
 
 .card-component__header {
     display: block;
+    background-color: hsl(277, 78%, 40%);
+    border-top-left-radius: var(--general-radius);
+    border-top-right-radius: var(--general-radius);
 }
 
 .card-component img {
+    display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
+    opacity: .46;
+    border-top-left-radius: var(--general-radius);
+    border-top-right-radius: var(--general-radius);
 }
