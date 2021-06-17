@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    position: relative;
+    font-size: 1.5rem;
+    font-family: Inter, 'Sans-serif';
+    background-color: hsl(233, 47%, 7%);
+    color: hsl(0, 0%, 100%);
+}
+
+.card-component {
+    display: block;
+    min-width: 310px;
+    width: 88%;
+    max-width: 1267px;
+    margin: 100px auto 0px;
+    background-color: hsl(244, 38%, 16%);
+}
+
+.card-component__header {
+    display: block;
+}
+
+.card-component img {
+    width: 100%;
+    height: auto;
+}
