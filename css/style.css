@@ -5,7 +5,7 @@
     --accent-img: hsl(277, 78%, 40%);
     --accent: hsl(277, 64%, 61%);
     --color-main-paragraph: hsla(0, 0%, 100%, 0.75);
-    --color-stat-text: hsla(0, 0%, 100%, 0.6)
+    --color-stat-headings: hsla(0, 0%, 100%, 0.6)
 }
 
 * {
@@ -55,7 +55,7 @@ body {
 
 
 .card-component__body {
-    padding: 40px 30px;
+    padding: 40px 30px 20px;
 }
 
 .card-component__title {
@@ -72,4 +72,38 @@ body {
     margin-bottom: 40px;
     line-height: 2.5rem;
     color: var(--color-main-paragraph);
+}
+
+
+.stat {
+    margin-bottom: 28px;
+    text-transform: uppercase;
+}
+
+.stat:first-child {
+    text-transform: none;
+}
+
+.stat__number {
+    font-size: 2.3rem;
+    font-weight: 700;
+}
+
+.stat__title {
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 1.8rem;
+    letter-spacing: .2rem;
+    color: var(--color-stat-headings);
+}
+
+.attribution { 
+    margin: 40px auto 30px;
+    font-size: 13px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: var(--accent);
+    font-size: 14px; 
+    text-transform: none;
 }
