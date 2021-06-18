@@ -1,5 +1,5 @@
 :root {
-    --general-radius: 14px;
+    --general-radius: 12px;
     --main-background: hsl(233, 47%, 7%);
     --card-background: hsl(244, 38%, 16%);
     --accent-img: hsl(277, 78%, 40%);
@@ -30,7 +30,6 @@ body {
     display: block;
     min-width: 310px;
     width: 88%;
-    max-width: 1267px;
     margin: 100px auto 0px;
     text-align: center;
     border-radius: var(--general-radius);
@@ -96,6 +95,7 @@ body {
     letter-spacing: .2rem;
     color: var(--color-stat-headings);
 }
+
 
 .attribution { 
     margin: 40px auto 30px;
