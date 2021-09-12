@@ -1,91 +1,110 @@
-# Frontend Mentor - Stats preview card component
+# Card stats
 
-![Design preview for the Stats preview card component coding challenge](./design/desktop-preview.jpg)
+* [Descripción](#descripcion)
+* [Proceso y Desarrollo](#proceso-y-desarrollo)
+    1. [Built With](#built-with)
+    2. [Criterios del Desarrollo](#criterios-del-desarrollo)
+    3. [Construccion de la pagina](#construccion-de-la-pagina)
+    4. [Guide style CSS](#guide-style-css)
+* [Result](#result)
+* [What I Learn](#what-i-learn)
+* [Where I Learn](#where-i-learn)
 
-## Welcome! 👋
+## Descripción
+Este es un desafío de [Frontend Mentor](https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62), de aquí se obtienen tanto el diseño, contenido, tipografía y colores, para que se pueda realizar su construcción sin dificultades en cuanto a la fidelidad.
 
-Thanks for checking out this front-end coding challenge.
+Dicho lo anterior **yo me encargué de desarrollar y construir la página**, los criterios para este desafío son: 
+1. La página debe verse lo más parecido al diseño que es proveído para **desktop (1440px de ancho)**.
+2. La página debe verse lo más parecido al diseño que es proveído para **mobilel/smartphone (375px de ancho)**.
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+**Diseño para Mobile.**
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+![Design preiew Mobile](./design/mobile-design.jpg)
 
-## The challenge
+**Diseño para Desktop.**
 
-Your challenge is to build out this card component and get it looking as close to the design as possible.
+![Design preview Desktop](./design/desktop-preview.jpg)
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+## Proceso y Desarrollo 
 
-Your users should be able to:
+### Built With
+	
+En este trabajo se utilizan tecnologías **HTML** & **CSS**, en su estado puro sin uso de herramientas extras, ambas son las únicas capaces para trabajar en el navegador, HTML para la estructura del Documento y CSS para la presentación.
 
-- View the optimal layout depending on their device's screen size
+Se utilizó la **Metodología Block Element Modifier (BEM)**, esta es aplicada para el manejo de clases, mismas que se utilizan para la aplicación del CSS.
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+Se utilizó como controlador de versiones **Git** para el desarrollo local y **GitHub** para guardar el proyecto en un repositorio remoto.
 
-## Where to find everything
+Se implementó la filosofía de **Mobile First**, en esta se piensa construyendo primero la versión o el diseño que es se necesita para los dispositivos mobile, después con eso se tiene una base que para los otros tipos de viewport y de allí se empieza a modificar.
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+### Criterios del Desarrollo
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+Para mi documento HTML debe partir de analizar los múltiples diseños que se tengan, observar que elementos se mantienen hasta cierto punto relacionados.  
+1. Aquellos que se mantengan agrupados nos dará una sobre los elementos o bloques **"padre o madre"**
+2. Dentro de cada Bloque madre encontrado tenemos que ver la composición en cada diseño, esto nos ayuda a diferenciar a los hijos.  
+3. Observar las constancias y relaciones para crear las clases.
+4. Repite los pasos anteriores hasta encontrar una estructura ideal.
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+Para que sea HTML semántico ahora toca preguntarte lo siguiente:
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+1. ¿Qué hace cada elemento?
+2. ¿Cuál es su propósito?
+3. ¿Cuál es su comportamiento en el diseño?
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+Luego elige la etiqueta HTML que cumpla con dichas preguntas y si existen dudas se puede ir siempre a la documentación o búsqueda en la web. 
 
-## Building your project
+### Construccion de la pagina
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+Si aplicas lo se describe en la sección anterior tenemos el siguiente flujo:
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+1. Un contenedor principal o la **card**.
+2. Esta **card** tiene dos **Hijos**.
+3. Uno de estos hijos es **Contenedor**, el cual tiene como hijo una **Imagen** 
+4. El otro hijo de la **card** es un **contenedor** que dentro de él, tiene la información.
+5. Dentro de este contenedor de información, se tienen **3 hijos**.
+6. El primero es el **Título**.
+7. El segundo es **texto**.
+8. Por último son las **Estadísticas**
+9. Las estadísticas se ven **3 estadísticas diferentes**.
+10. Entonces se tiene un **Hijo por cada estadística**.
 
-## Deploying your project
+Nos queda de base la siguiente estructura:
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+![Estructura de la Pagina](./design/estructura.jpg)
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+[**Para ver más a detalle el código HTML**](https://github.com/JoseLuisFV/challenge-card-component/blob/master/index.html)
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+### Guide Style CSS
 
-## Create a custom `README.md`
+Para el CSS explicar cada decisión paso por paso sería muy largo, por lo que solamente lo mejor será explicar el orden en que los estilos se acomodan, se trató de seguir el siguiente orden dentro de cada **selector**:
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+1. Primero se agregan los estilos del posicionamiento (abosolute, top, static, etc.).
+2. Segundo lugar los estilos que son del display (block, flex-direction, grid-row, etc.).
+3. Tercero los estilos que tiene relación con el modelo de caja (width, padding, margin, etc.)
+4. Cuarto lugar los estilos de los textos (font-size, line-height, align-text, etc).
+5. Por último los que decoran(background, box-shadow, border-radius, etc).
+6. Si hay transiciones o animación se agregan al final.
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+## Result
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+In [**this link**](https://app.netlify.com/sites/joseluisfv-card-component/overview) you can see the resul of this project.
 
-## Submitting your solution
+## What I Learn
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+Este desafío es para probar mis habilidades, como primera página o trabajo hecho sin ayuda o guía directa, puedo decir que descubrí realmente las ventajas que la metodología o filosofía mobile first, porque al terminar esa versión ya se tiene una base de diseño, sobre la  que se va modificando y construyendo.
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+Por ejemplo en las **Estadísticas** en la versión mobile se le colocó un display flex, con **flex-direction: column**, y para el desktop solo se le cambió su valor a **row**, también hay 3 propiedades de css que soportan muy bien esta metodología las cuales son **min-width, width y max-width**, con estas se controla perfectamente el tamaño de anchura.
 
-## Sharing your solution
+También se aprendió que las imágenes se les tiene que agregar un **Display block**, porque por defecto vienen en **inline-block**, lo que hace que se quede un espació extra, que imposibilita que tome el tamaño sé su contenedor.
 
-There are multiple places you can share your solution:
+## Where I Learn
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+Lo aplicado en este desafío lo aprendí en una plataforma online llamada [**platzi**](https://platzi.com/)
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+## Author
 
-## Got feedback for us?
+- Website - [JoseLuisFV](https://joseluisfv.github.io/)
+- Frontend Mentor - [@JoseLuisFV](https://www.frontendmentor.io/profile/JoseLuisFV)
+- Twitter - [@FloresVacio](https://www.twitter.com/FloresVacio)
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀

@@ -2,7 +2,6 @@
     display: flex;
     width: 100%;
     max-width: 1308px;
-    margin-top: 200px;
 }
 
 .card-component__header {
