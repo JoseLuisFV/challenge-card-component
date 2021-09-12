@@ -87,7 +87,7 @@ Para el CSS explicar cada decisión paso por paso sería muy largo, por lo que s
 
 ## Result
 
-In [**this link**](https://app.netlify.com/sites/joseluisfv-card-component/overview) you can see the resul of this project.
+In [**this link**](https://joseluisfv-card-component.netlify.app) you can see the resul of this project.
 
 ## What I Learn
 
